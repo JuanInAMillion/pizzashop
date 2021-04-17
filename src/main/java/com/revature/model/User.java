@@ -5,6 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Entity
 @Table(name = "users", schema = "pizzashop")
 public class User {
@@ -13,7 +24,7 @@ public class User {
 	@Column(name = "user_email")
 	private String userEmail;
 	
-	@Column(name = "password")
+	@Column(name = "user_password")
 	private String password;
 	
 	@Column(name = "user_address")

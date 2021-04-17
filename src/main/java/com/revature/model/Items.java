@@ -7,6 +7,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+@EqualsAndHashCode
 @Entity
 @Table(name = "items", schema = "pizzashop")
 public class Items {
@@ -14,19 +32,18 @@ public class Items {
 		@Id
 		@Column(name = "item_id")
 	 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private String userEmail;
+		private int itemId;
 		
 		@Column(name = "image")
-		private String password;
+		private String image;
 		
 		@Column(name = "price")
-		private double userAddress;
+		private double price;
 		
 		@Column(name = "description")
 		private String description;
 		
 		@Column(name = "stock")
-		private int lastName;
+		private int stock;
 		
-
 }
