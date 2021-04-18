@@ -1,8 +1,12 @@
 package com.revature.model;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.EqualsAndHashCode;
@@ -42,7 +46,13 @@ public class User {
 	@Column(name = "cc_number")
 	private String ccNumber;
 
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+	private List<Orders> orders;
 	
+	
+	public User() {
+		
+	}
 	
 	
 	public User(String userEmail, String password, String userAddress, String firstName, String lastName,
