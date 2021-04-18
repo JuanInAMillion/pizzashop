@@ -36,8 +36,8 @@ public class Orders {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderNo;
 	
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "order")
-	private List<Item> order_items;
+	//@OneToMany(fetch = FetchType.LAZY, mappedBy = "order")
+	//private List<Item> order_items;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_email")
@@ -63,13 +63,13 @@ public class Orders {
 		this.orderNo = orderNo;
 	}
 
-	public List<Item> getOrder_items() {
-		return order_items;
-	}
-
-	public void setOrder_items(List<Item> order_items) {
-		this.order_items = order_items;
-	}
+//	public List<Item> getOrder_items() {
+//		return order_items;
+//	}
+//
+//	public void setOrder_items(List<Item> order_items) {
+//		this.order_items = order_items;
+//	}
 
 	public User getUser() {
 		return user;
@@ -115,7 +115,7 @@ public class Orders {
 			Date arrivalDate, boolean isPending) {
 		super();
 		this.orderNo = orderNo;
-		this.order_items = order_items;
+//		this.order_items = order_items;
 		this.user = user;
 		this.shippingAddress = shippingAddress;
 		this.orderDate = orderDate;
@@ -133,7 +133,7 @@ public class Orders {
 
 	@Override
 	public String toString() {
-		return "Orders [orderNo=" + orderNo + ", order_items=" + order_items + ", user=" + user + ", shippingAddress="
+		return "Orders [orderNo=" + orderNo + ", user=" + user + ", shippingAddress="
 				+ shippingAddress + ", orderDate=" + orderDate + ", arrivalDate=" + arrivalDate + ", isPending="
 				+ isPending + "]";
 	}
@@ -146,7 +146,6 @@ public class Orders {
 		result = prime * result + (isPending ? 1231 : 1237);
 		result = prime * result + ((orderDate == null) ? 0 : orderDate.hashCode());
 		result = prime * result + orderNo;
-		result = prime * result + ((order_items == null) ? 0 : order_items.hashCode());
 		result = prime * result + ((shippingAddress == null) ? 0 : shippingAddress.hashCode());
 		result = prime * result + ((user == null) ? 0 : user.hashCode());
 		return result;
@@ -174,11 +173,6 @@ public class Orders {
 		} else if (!orderDate.equals(other.orderDate))
 			return false;
 		if (orderNo != other.orderNo)
-			return false;
-		if (order_items == null) {
-			if (other.order_items != null)
-				return false;
-		} else if (!order_items.equals(other.order_items))
 			return false;
 		if (shippingAddress == null) {
 			if (other.shippingAddress != null)
