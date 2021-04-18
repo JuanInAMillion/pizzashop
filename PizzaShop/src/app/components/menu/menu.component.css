@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
+:root
+{
+    --red:#e84118;
+}
+
+*
+{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    transition: all .2s cubic-bezier(.37,1.14,.26,1.24);
+}
+
+*::selection
+{
+    background:#e84118;
+    color: #fff;
+}
+
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.btn
+{
+    height: 4.5rem;
+    width: 18rem;
+    color: #fff;
+    border: .2rem solid #e84118;
+    outline: .2rem solid #e84118;
+    outline-offset: -.8rem;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover
+{
+    outline-offset: .4rem;
+    background: #e84118;
+}
+
+.heading 
+{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    padding-top: 6rem;
+    box-shadow: 0 .2rem .05rem rgba(0, 0,0, .3);
+}
+
+.heading span
+{
+    display: inline-block;
+    font-size: 3.5rem;
+    color: #e84118;
+    padding: 1rem 0;
+    box-shadow: 0 .2rem .05rem #e84118;
+}
+
+.menu
+{
+    min-height: 100vh;
+}
+
+ .menu .controls
+ {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     padding: 2rem 0;
+     list-style: none;
+ }
+
+ .menu .controls .buttons
+ {
+     margin: 1rem 2rem;
+     padding: .5rem;
+     border: .2rem solid #000;
+     color: #000;
+     cursor: pointer;
+     font-size: 2rem;
+ }
+
+.image-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+ .image img{
+     width: 30em;
+     margin-top: 2em;
+     box-shadow: 0 .5rem .5rem rgba(0, 0,0, .3);
+ }
+
+/* MEDIA QUERIES */
+
+@media (max-width:768px)
+{
+    html
+    {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:400px)
+{
+    html
+    {
+        font-size: 5rem;
+    }
+}
