@@ -5,7 +5,6 @@ import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { OrdernowComponent } from './components/ordernow/ordernow.component';
 import { AccountComponent } from './components/account/account.component';
-import { LoginComponent } from './components/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
@@ -34,10 +33,6 @@ const routes: Routes = [
   {
     path: 'account',
     component: AccountComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
   },
   {
     path: 'cart',
