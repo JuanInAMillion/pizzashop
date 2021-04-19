@@ -73,11 +73,10 @@ public class UserController {
 		userRepo.delete(user);
 	}
 	
-	@PostMapping("user/login")
+	@PostMapping("/loginverification")
 	public User login(@PathVariable(value = "email") String userEmail, @PathVariable(value = "password") String password) throws UserNotFoundException {
 		Example<User> userEx = Example.of(new User(userEmail, password));
 		User user = userRepo.findOne(userEx).orElseThrow(() -> new UserNotFoundException("User with email " + userEmail + " was not found"));
 		return user;
 	}
-	
 }
