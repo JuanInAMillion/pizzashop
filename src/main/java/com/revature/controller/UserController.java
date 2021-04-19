@@ -5,6 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -70,6 +71,13 @@ public class UserController {
 				.orElseThrow(() -> new UserNotFoundException("User with email " + userEmail + " was not found"));
 		
 		userRepo.delete(user);
+	}
+	
+	@PostMapping("user/login")
+	public User login(@PathVariable(value = "email") String userEmail, @PathVariable(value = "password") String password) throws UserNotFoundException {
+		Example<User> userEx = Example.of(new User(userEmail, password));
+		User user = userRepo.findOne(userEx).orElseThrow(() -> new UserNotFoundException("User with email " + userEmail + " was not found"));
+		return user;
 	}
 	
 }

@@ -20,7 +20,7 @@ export class ValidationServiceService {
   validateUser(email: string, password: string): Observable<User> {
     let info = {email,password};
     return this.http.post<User>(
-        `${this.baseUrl}login`, JSON.stringify(info), this.httpOptions
+        `${this.baseUrl}loginverification`, JSON.stringify(info), this.httpOptions
     ).pipe(
      retry(1),
      catchError(this.errorHandler)
