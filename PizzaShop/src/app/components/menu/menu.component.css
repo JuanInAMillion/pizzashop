@@ -67,6 +67,165 @@ html
     box-shadow: 0 .2rem .05rem #e84118;
 }
 
+header .header-1
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem 2rem;
+}
+
+.logo 
+{
+    font-size: 2.5rem;
+}
+header .header-1 .call
+{
+    font-size: 2rem;
+    color: black;
+}
+
+header .header-2
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #e84118;
+    padding: .5rem;
+    position: relative;
+    z-index: 1000;
+}
+
+header .header-2 .navbar ul
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .header-2 .navbar ul li
+{
+    margin: 1rem;
+}
+
+header .header-2 .navbar ul li a
+{
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .header-2 .navbar ul li a.active,
+header .header-2 .navbar ul li a:hover
+{
+    color: black;
+}
+
+header .header-2 .share a 
+{
+    font-size: 2rem;
+    color: #fff;
+    margin: 1rem;
+}
+
+header .header-2 .share a:hover
+{
+    color:black;
+}
+
+header .header-2 #menu
+{
+    font-size: 3rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    margin: 1rem;
+}
+
+header .header-2.header-active
+{
+    position: fixed;
+    top: 0; left: 0;
+    box-shadow: 0 .1rem .3rem rgba(0, 0,0, .3);
+}
+
+.home 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(/Users/alfonsoguaderrama/Documents/GitHub/PIZZA/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.home .content
+{
+    text-align: center;
+    padding: 1rem;
+}
+
+.home .content h1
+{
+    font-size: 6rem;
+    color: #fff;
+}
+
+.home .content h1 span
+{
+    color: #e84118;
+}
+
+.home .content p
+{
+    font-size: 2rem;
+    color: #e84118;
+    width: 68rem;
+    padding: 1rem 0;
+}
+
+.about
+{
+    min-height: 100vh;
+}
+
+.about .row
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    overflow-x: hidden;
+}
+
+.about .row .content
+{
+    padding: 1rem;
+}
+
+.about .row .content h3
+{
+    font-size: 3.5rem;
+    color:black;
+}
+
+.about .row .content .btn
+{
+    color: #e84118;
+    border-color: #e84118;
+    outline-color: #e84118;
+}
+
+.about .row .content .btn:hover
+{
+    color: #fff ;
+}
+
 .menu
 {
     min-height: 100vh;
@@ -85,31 +244,424 @@ html
  .menu .controls .buttons
  {
      margin: 1rem 2rem;
-     padding: .5rem;
-     border: .2rem solid #000;
+     padding: .5rem 0;
+     border-bottom: .2rem solid #000;
      color: #000;
      cursor: pointer;
      font-size: 2rem;
  }
 
-.image-container {
-    width: 80%;
-    margin: 0 auto;
+ .menu .image-container button
+ {
+    height: 3.8rem;
+    width: 17rem;
+    font-size: 1.7rem;
+    background: #e84118;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5rem;
+ }
+
+ .menu .image-container button:hover
+ {
+    letter-spacing: .1rem;
+    opacity: .8;
+ } 
+
+ .menu .controls .buttons.button-active,
+ .menu .controls .buttons:hover
+ {
+     color: #e84118;
+     border-color: #e84118;
+ } 
+
+.menu .image-container
+{
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
 }
 
- .image img{
-     width: 30em;
-     height: 20em;
-     margin-top: 2em;
-     box-shadow: 0 .5rem .5rem rgba(0, 0,0, .3);
-     object-fit: cover;
-     object-position: 20% 10%;
- }
- 
+.menu .image-container .image
+{
+    width: 35rem;
+    margin: 2rem;
+    border: 1rem solid #fff;
+    box-shadow: 0 .5rem .5rem rgba(0, 0,0, .3);
+}
+
+.menu .image-container .image img
+{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu .image-container .image a
+{
+    font-size: 2rem;
+    color: #000;
+    padding: .5rem;
+}
+
+.menu .image-container .image a:hover
+{
+    color: #e84118;
+    text-decoration: underline;
+}
+
+
+
+.menu .image-container .image p
+{
+    font-size: 2rem;
+    color: #000;
+    padding: .5rem;
+}
+
+.newsletter
+{
+    padding: 2rem 1rem;
+    background: linear-gradient(rgba (255,255,255,.5)#fff);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.newsletter h1
+{
+    font-size: 4rem;
+    color: #000 ;
+}
+
+.newsletter p
+{
+    font-size: 2rem;
+    color: #000 ;
+}
+
+.newsletter form
+{
+    margin: 1rem auto;
+    padding: .5rem 1rem;
+    max-width: 60rem;
+    border-radius: 5rem;
+    box-shadow: 0 .3rem .5rem rgba(0, 0,0, .3);
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.newsletter form input[type="email"]
+{
+    height: 4rem;
+    padding: 0 1rem;
+    width: 100%;
+    font-size: 1.7rem;
+    background: none;
+    border: none;
+    color: #000;
+}
+
+.newsletter form input[type="submit"]
+{
+    height: 3.8rem;
+    width: 17rem;
+    font-size: 1.7rem;
+    background: #e84118;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5rem;
+}
+
+.newsletter form input[type="submit"]:hover
+{
+    letter-spacing: .1rem;
+    opacity: .8;
+}
+
+.footer .box-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box
+{
+    flex: auto;
+    margin: 2rem;
+}
+
+.footer .box-container .box .heading
+{
+    margin: 0; padding: 0;
+    box-shadow: 0 .2rem .05rem #000; 
+    margin-bottom: .5rem;
+    text-align: left;
+
+}
+
+.footer .box-container .box .heading span
+{
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.footer .box-container .box p 
+{
+    padding: 1rem 0;
+    color: #000;
+    font-size: 1.7rem;
+}
+
+.footer .box-container .box:first-child
+{
+    font-size: 1.4rem;
+}
+
+.footer .box-container .box p i
+{
+    padding: 0 .5rem;
+    color: #000;
+}
+
+.footer .box-container .box a
+{
+    font-size: 1.7rem;
+    display: block;
+    padding: .5rem 0;
+    color: #000;
+}
+
+.loginbox
+{
+    width: 320px;
+    height: 420px;
+    background: #e84118;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.avatar
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -17%;
+    left: 105px;
+}
+
+h1
+{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #000;
+    font-size: 16px;
+}
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+}
+
+.loginbox a
+{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.loginbox a:hover
+{
+    color:#000;
+}
+
+.loginbox button
+{
+    border: none;
+    outline: none;
+    height: 35px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox button:hover
+{
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+}
+
+.cart-page
+{
+    margin: 80px auto;
+}
+
+.cart-page table
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-page .cart-info
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cart-page p
+{
+    font-size: 20px;
+}
+
+.cart-page small
+{
+    font-size: 15px;
+}
+
+.cart-page button
+{
+    height: 4.5rem;
+    width: 18rem;
+    color: #e84118;
+    border: .2rem solid #e84118;
+    outline: .2rem solid #e84118;
+    outline-offset: -.8rem;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    background: none;
+}
+
+.cart-page button:hover
+{
+    outline-offset: .4rem;
+    background: #e84118;
+    color: #fff;
+}
+
+th
+{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #e84118;
+    font-weight: normal;
+    font-size: 17px;
+
+}
+
+td
+{
+    padding: 10px 5px;
+}
+
+td input
+{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a
+{
+    color: #e84118;
+    font-size: 17px;
+}
+
+td img
+{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.total-price
+{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table
+{
+    border-top: 3px solid #e84118;
+    width: 100%;
+    max-width: 350px;
+}
+
+td:last-child
+{
+    text-align: right;
+}
+
+th:last-child
+{
+    text-align: right;
+}
+
+.total-price td
+{
+    font-size: 12px;
+}
+
+
+
+
+
 
 /* MEDIA QUERIES */
 
@@ -119,6 +671,59 @@ html
     {
         font-size: 55%;
     }
+
+    header .header-2 #menu
+    {
+        display: block;
+    }
+
+    header .header-2 .navbar 
+    {
+        position: absolute;
+        top: 100%; left: -120%;
+    }
+
+    header .header-2 .navbar ul
+    {
+        flex-flow: column;
+        justify-content: center;
+        min-height: calc(100vh-6rem);
+        padding-bottom: 6rem;
+        background: grey;
+        width: 32rem;
+    }
+
+    header .header-2 .navbar ul li
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    header .header-2 .navbar ul li a
+    {
+        font-size: 2.7rem;
+        display: block;
+    }
+
+    header .header-2 .nav-toggle
+    {
+        left: 0%;
+    }
+    
+    .home .content h1
+    {
+        font-size: 5rem;
+    }
+
+    .home .content p
+    {
+        width: auto;
+    }
+
+    .about .row
+    {
+        flex-flow: column;
+    }
 }
 
 @media (max-width:400px)
@@ -127,4 +732,20 @@ html
     {
         font-size: 5rem;
     }
+
+    header .header-1
+    {
+        flex-flow: column;
+    }
+
+    header .header-1 .logo
+    {
+        padding-bottom: 1rem;
+    }
+
+    header .header-2 .navbar ul
+    {
+        width: 100vw;
+    }
+
 }

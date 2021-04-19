@@ -1,6 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
+@import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
 :root
 {
     --red:#e84118;
@@ -252,6 +251,25 @@ header .header-2.header-active
      font-size: 2rem;
  }
 
+ .menu .image-container button
+ {
+    height: 3.8rem;
+    width: 17rem;
+    font-size: 1.7rem;
+    background: #e84118;
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5rem;
+ }
+
+ .menu .image-container button:hover
+ {
+    letter-spacing: .1rem;
+    opacity: .8;
+ } 
+
  .menu .controls .buttons.button-active,
  .menu .controls .buttons:hover
  {
@@ -295,6 +313,8 @@ header .header-2.header-active
     color: #e84118;
     text-decoration: underline;
 }
+
+
 
 .menu .image-container .image p
 {
@@ -508,6 +528,24 @@ h1
     color:#000;
 }
 
+.loginbox button
+{
+    border: none;
+    outline: none;
+    height: 35px;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+.loginbox button:hover
+{
+    cursor: pointer;
+    background: #fff;
+    color: #000;
+}
+
 .cart-page
 {
     margin: 80px auto;
@@ -533,6 +571,27 @@ h1
 .cart-page small
 {
     font-size: 15px;
+}
+
+.cart-page button
+{
+    height: 4.5rem;
+    width: 18rem;
+    color: #e84118;
+    border: .2rem solid #e84118;
+    outline: .2rem solid #e84118;
+    outline-offset: -.8rem;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    background: none;
+}
+
+.cart-page button:hover
+{
+    outline-offset: .4rem;
+    background: #e84118;
+    color: #fff;
 }
 
 th

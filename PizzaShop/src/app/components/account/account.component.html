@@ -1,11 +1,14 @@
-<div id="formContainer">
+
+<div class="loginbox">
+    <img src="../../../assets/images/user.png" class="avatar">
+    <h1>LOGIN HERE</h1>
     <form id="form" action="app/login" method="post" class="container">
-    
-        <input type="email" placeholder="Enter Email" name="email" id="email" [(ngModel)] = "email" required>
-
-        <input type="password" placeholder="Enter Password" name="password" id="password" [(ngModel)] = "password" required>
-
-
-        <button (click) = validateUser() class="btn form-btn" id="submit">Login</button>
+        <p>USERNAME</p>
+        <input type="text" placeholder="ENTER USERNAME" name="email" id="email" [(ngModel)] = "email" required>
+        <p>PASSWORD</p>
+        <input type="password" placeholder="ENTER PASSWORD" name="password" id="password" [(ngModel)] = "password" required>
+        <input (click) = validateUser() type="submit" id="submit" name="" value="LOGIN"> 
+        <a href="#">LOST YOUR PASSWORD?</a><br>
+        <a href="#">NEED AN ACCOUNT?</a>
     </form>
 </div>
