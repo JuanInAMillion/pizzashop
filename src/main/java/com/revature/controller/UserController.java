@@ -22,7 +22,7 @@ import com.revature.model.User;
 import com.revature.repo.UserRepo;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:9095")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/userpage")
 public class UserController {
 	@Autowired
@@ -74,9 +74,9 @@ public class UserController {
 	}
 	
 	@PostMapping("/loginverification")
-	public User login(@PathVariable(value = "email") String userEmail, @PathVariable(value = "password") String password) throws UserNotFoundException {
-		Example<User> userEx = Example.of(new User(userEmail, password));
-		User user = userRepo.findOne(userEx).orElseThrow(() -> new UserNotFoundException("User with email " + userEmail + " was not found"));
+	public User login(@RequestBody User loginUser) throws UserNotFoundException {
+		Example<User> userEx = Example.of(loginUser);
+		User user = userRepo.findOne(userEx).orElseThrow(() -> new UserNotFoundException("User with email " + loginUser.getUserEmail() + " was not found"));
 		return user;
 	}
 }
