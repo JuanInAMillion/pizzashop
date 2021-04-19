@@ -8,7 +8,7 @@ import {catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ValidationServiceService {
-  baseUrl = 'http://localhost:9095/account/userpage/';
+  baseUrl = 'http://localhost:9095/userpage/';
   constructor(private http: HttpClient) { }
 
   httpOptions = {
@@ -20,7 +20,7 @@ export class ValidationServiceService {
   validateUser(email: string, password: string): Observable<User> {
     let info = {email,password};
     return this.http.post<User>(
-        `${this.baseUrl}login`, JSON.stringify(info), this.httpOptions
+        `${this.baseUrl}loginverification`, JSON.stringify(info), this.httpOptions
     ).pipe(
      retry(1),
      catchError(this.errorHandler)
