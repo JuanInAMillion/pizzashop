@@ -8,7 +8,7 @@ import {catchError, retry } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ValidationServiceService {
-  baseUrl = 'http://localhost:9095/account/userpage/';
+  baseUrl = 'http://localhost:9095/userpage/';
   constructor(private http: HttpClient) { }
 
   httpOptions = {

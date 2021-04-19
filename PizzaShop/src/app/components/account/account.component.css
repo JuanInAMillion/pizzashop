@@ -30,12 +30,13 @@ html
 .btn
 {
     height: 4.5rem;
-    width: 18rem;
-    color: #fff;
+    width: 24rem;
+    color:red;
     border: .2rem solid #e84118;
     outline: .2rem solid #e84118;
     outline-offset: -.8rem;
     font-size: 2rem;
+    text-align: center;
     margin: 1.5rem 0;
     cursor: pointer;
     background: none;
@@ -45,6 +46,7 @@ html
 {
     outline-offset: .4rem;
     background: #e84118;
+    color:white;
 }
 
 .form-btn {
