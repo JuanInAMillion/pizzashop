@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.revature.model.Items;
 
-@Repository
 public interface ItemRepo extends JpaRepository<Items, Integer> {
 
 }

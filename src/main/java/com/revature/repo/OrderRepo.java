@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.revature.model.Orders;
 
-@Repository
 public interface OrderRepo extends JpaRepository<Orders, String>{
 
 }

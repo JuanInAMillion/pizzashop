@@ -53,13 +53,13 @@ public class UserController {
 		User user = userRepo.findById(userEmail) 
 		.orElseThrow(() -> new UserNotFoundException("User with email " + userEmail + " was not found"));
 		
-		user.setCcNumber(userInfo.getCcNumber());
-		user.setFirstName(userInfo.getFirstName());
-		user.setLastName(userInfo.getLastName());
+		user.setCcnumber(userInfo.getCcnumber());
+		user.setFirstname(userInfo.getFirstname());
+		user.setLastname(userInfo.getLastname());
 		user.setPassword(userInfo.getPassword());
-		user.setPhoneNumber(userInfo.getPhoneNumber());
-		user.setUserAddress(userInfo.getUserAddress());
-		user.setUserEmail(userInfo.getUserEmail());
+		user.setPhonenumber(userInfo.getPhonenumber());
+		user.setAddress(userInfo.getAddress());
+		user.setEmail(userInfo.getEmail());
 		
 		final User finalUser = userRepo.save(user);
 		return ResponseEntity.ok(finalUser);
@@ -75,8 +75,9 @@ public class UserController {
 	
 	@PostMapping("/loginverification")
 	public User login(@RequestBody User loginUser) throws UserNotFoundException {
+		System.out.println(loginUser);
 		Example<User> userEx = Example.of(loginUser);
-		User user = userRepo.findOne(userEx).orElseThrow(() -> new UserNotFoundException("User with email " + loginUser.getUserEmail() + " was not found"));
+		User user = userRepo.findOne(userEx).orElseThrow(() -> new UserNotFoundException("User with email " + loginUser.getEmail() + " was not found"));
 		return user;
 	}
 }

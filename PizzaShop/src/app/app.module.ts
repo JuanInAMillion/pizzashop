@@ -14,6 +14,7 @@ import { AccountComponent } from './components/account/account.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AccountComponent,
     PageNotFoundComponent,
     CartComponent,
-    FooterComponent
+    FooterComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
