@@ -3,10 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { OrdernowComponent } from './components/ordernow/ordernow.component';
 import { AccountComponent } from './components/account/account.component';
 import { CartComponent } from './components/cart/cart.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { ProductsComponent } from './products/products.component';
 
 
 const routes: Routes = [
@@ -28,7 +28,7 @@ const routes: Routes = [
   },
   {
     path: 'ordernow',
-    component: OrdernowComponent
+    component: ProductsComponent
   },
   {
     path: 'account',

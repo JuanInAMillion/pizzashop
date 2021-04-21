@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {ActivatedRoute } from '@angular/router';
+import {CartService} from '../../products/cart/cart.service';
 
 @Component({
   selector: 'app-ordernow',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdernowComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private cartService: CartService, private route: ActivatedRoute ) { }
 
   ngOnInit(): void {
   }
-
 }
+

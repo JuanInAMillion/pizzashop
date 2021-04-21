@@ -36,9 +36,6 @@ public class Orders {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int orderNo;
 	
-	//@OneToMany(fetch = FetchType.LAZY, mappedBy = "order")
-	//private List<Item> order_items;
-	
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "user_email")
 	private User user;
@@ -52,7 +49,7 @@ public class Orders {
 	@Column(name = "arrival_date")
 	private Date arrivalDate;
 	
-	@Column(name = "is_pending")
+	@Column(name = "is_pending", columnDefinition = "boolean default false")
 	private boolean isPending;
 
 	public int getOrderNo() {
@@ -62,14 +59,6 @@ public class Orders {
 	public void setOrderNo(int orderNo) {
 		this.orderNo = orderNo;
 	}
-
-//	public List<Item> getOrder_items() {
-//		return order_items;
-//	}
-//
-//	public void setOrder_items(List<Item> order_items) {
-//		this.order_items = order_items;
-//	}
 
 	public User getUser() {
 		return user;
@@ -115,7 +104,6 @@ public class Orders {
 			Date arrivalDate, boolean isPending) {
 		super();
 		this.orderNo = orderNo;
-//		this.order_items = order_items;
 		this.user = user;
 		this.shippingAddress = shippingAddress;
 		this.orderDate = orderDate;
@@ -128,7 +116,7 @@ public class Orders {
 	}
 
 	public Orders(String userEmail) {
-		this.user.setUserEmail(userEmail);
+		this.user.setEmail(userEmail);
 	}
 
 	@Override
