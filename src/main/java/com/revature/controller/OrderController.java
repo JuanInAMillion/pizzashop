@@ -21,7 +21,7 @@ import com.revature.model.Orders;
 import com.revature.repo.OrderRepo;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:9095")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/orderpage")
 public class OrderController {
 	@Autowired
