@@ -5,6 +5,15 @@
     --red:#e84118;
 }
 
+h1 {
+    width: 650px;
+    top: 45%;
+    margin: 80px;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
 *
 {
     font-family: 'Roboto Condensed', sans-serif;
@@ -12,7 +21,6 @@
     box-sizing: border-box;
     text-decoration: none;
     outline: none;
-    text-transform: capitalize;
     transition: all .2s cubic-bezier(.37,1.14,.26,1.24);
 }
 
@@ -465,13 +473,6 @@ header .header-2.header-active
     left: 105px;
 }
 
-h1
-{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-}
 
 .loginbox p
 {

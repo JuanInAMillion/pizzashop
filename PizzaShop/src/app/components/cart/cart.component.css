@@ -8,7 +8,15 @@
 .cart-item {
     margin-left: 50%;
     margin-right: 50%;
+    column-width: 200px;
 }
+
+table{
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+    border-spacing: 5px;
+ }
 
 *
 {
@@ -61,11 +69,6 @@ button
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
-
-table{
-   margin-left:auto;
-   margin-right:auto;
 }
 
 button:hover

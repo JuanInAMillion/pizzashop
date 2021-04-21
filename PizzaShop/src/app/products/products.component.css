@@ -4,7 +4,29 @@
 {
     --red:#e84118;
 }
+h3{
+   position: absolute;
+   left:600px
+ }
+ h4{
+     position: relative;
+     top:25px;
+     left:240px;
+ }
 
+ 
+img {
+    position: relative;
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    width: 35rem;
+    margin: 2rem;
+    border: 1rem solid #fff;
+    box-shadow: 0 .5rem .5rem rgba(0, 0,0, .3);
+}
+
+ 
 *
 {
     font-family: 'Roboto Condensed', sans-serif;
@@ -230,12 +252,6 @@ header .header-2.header-active
 {
     min-height: 100vh;
 }
-
-h3, h4{
-   text-align: center;
-    right:-150px;
-}
-
  .menu .controls
  {
      display: flex;
@@ -292,18 +308,6 @@ h3, h4{
     justify-content: center;
     flex-wrap: wrap;
     padding-bottom: 2rem;
-}
-
-
-
-img {
-    height: 20rem;
-    width: 100%;
-    object-fit: cover;
-    width: 35rem;
-    margin: 2rem;
-    border: 1rem solid #fff;
-    box-shadow: 0 .5rem .5rem rgba(0, 0,0, .3);
 }
 
 .menu .image-container .image a
