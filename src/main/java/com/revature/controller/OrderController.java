@@ -1,6 +1,5 @@
 package com.revature.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
@@ -26,10 +25,19 @@ import com.revature.repo.OrderRepo;
 public class OrderController {
 	@Autowired
 	private OrderRepo orderRepo;
+//	@Autowired
+//	private MailService mailService;
 	
 	@PostMapping("/orders")
 	public Orders createOrder(@Valid @RequestBody Orders order) {
+//		Mail mail = new Mail();
+//		mail.setMailTo("rodrigo.flores@revature.net");
+//        mail.setMailSubject("Howdy do");
+//        mail.setMailContent("Sup boiiii");
+ 
+//        mailService.sendEmail(mail);
 		return orderRepo.save(order);
+		
 	}
 	
 	@GetMapping("/orders/all")

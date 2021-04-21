@@ -42,18 +42,19 @@ public class Orders {
 	@Column(name = "order_date")
 	private Date orderDate;
 	
-	@Column(name = "is_pending", columnDefinition = "boolean default false")
+	@Column(name = "is_pending", columnDefinition = "boolean default true")
 	private boolean isPending;
 	
 	@OneToMany(fetch = FetchType.EAGER, mappedBy="order_no")
 	private List<Items> items;
 	
 	
-	public Orders(int orderNo, List<Item> order_items, User user, String shippingAddress, Date orderDate,
+	public Orders(int orderNo, List<Items> items, User user, String shippingAddress, Date orderDate,
 			 boolean isPending) {
 		super();
 		this.orderNo = orderNo;
 		this.user = user;
+		this.items = items;
 		this.shippingAddress = shippingAddress;
 		this.orderDate = orderDate;
 		this.isPending = isPending;
