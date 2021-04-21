@@ -32,7 +32,7 @@ public class OrderController {
 		return orderRepo.save(order);
 	}
 	
-	@GetMapping("/orders")
+	@GetMapping("/orders/all")
 	public List<Orders> getAllOrders() {
 		return orderRepo.findAll();
 	}
