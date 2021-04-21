@@ -29,6 +29,7 @@ export class AccountComponent implements OnInit {
        if(this.currentUser != null) {
          localStorage.setItem('isLoggedIn', 'true');
          localStorage.setItem('token', this.currentUser.email);
+         localStorage.setItem('token2', this.currentUser.address);
       
          alert("Logged In Successfully");
          this.router.navigate(['/home']);
