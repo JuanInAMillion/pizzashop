@@ -22,7 +22,7 @@ import com.revature.model.Items;
 import com.revature.repo.ItemRepo;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:9095")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/itempage")
 public class ItemController {
 	

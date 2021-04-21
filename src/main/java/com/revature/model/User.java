@@ -43,12 +43,15 @@ public class User {
 //	private List<Orders> orders;
 	
 	public User() {
-		
 	}
 	
 	public User(String email, String password) {
 		this.email = email;
 		this.password = password;
+	}
+	
+	public User(String email) {
+		this.email = email;
 	}
 
 	public String getEmail() {

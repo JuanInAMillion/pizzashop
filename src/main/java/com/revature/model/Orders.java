@@ -11,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.cache.spi.support.AbstractReadWriteAccess.Item;
@@ -21,11 +22,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@Setter
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
+
 @Entity
 @Table(name = "order" , schema = "pizzashop")
 public class Orders {
@@ -47,7 +44,25 @@ public class Orders {
 	
 	@Column(name = "is_pending", columnDefinition = "boolean default false")
 	private boolean isPending;
-
+	
+	@OneToMany(fetch = FetchType.EAGER, mappedBy="order_no")
+	private List<Items> items;
+	
+	
+	public Orders(int orderNo, List<Item> order_items, User user, String shippingAddress, Date orderDate,
+			 boolean isPending) {
+		super();
+		this.orderNo = orderNo;
+		this.user = user;
+		this.shippingAddress = shippingAddress;
+		this.orderDate = orderDate;
+		this.isPending = isPending;
+	}
+	
+	public Orders() {
+		
+	}
+	
 	public int getOrderNo() {
 		return orderNo;
 	}
@@ -86,20 +101,6 @@ public class Orders {
 
 	public void setPending(boolean isPending) {
 		this.isPending = isPending;
-	}
-
-	public Orders(int orderNo, List<Item> order_items, User user, String shippingAddress, Date orderDate,
-			 boolean isPending) {
-		super();
-		this.orderNo = orderNo;
-		this.user = user;
-		this.shippingAddress = shippingAddress;
-		this.orderDate = orderDate;
-		this.isPending = isPending;
-	}
-	
-	public Orders() {
-		
 	}
 
 	public Orders(String userEmail) {

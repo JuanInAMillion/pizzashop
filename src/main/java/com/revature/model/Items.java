@@ -16,11 +16,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 
-@Getter
-@Setter
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
 @Entity
 @Table(name = "items", schema = "pizzashop")
 public class Items {
@@ -44,20 +39,20 @@ public class Items {
 		
 		@ManyToOne(fetch = FetchType.LAZY)
 		@JoinColumn(name = "order_no")
-		private Orders orderItems;
+		private Orders order_no;
 		
 		public Items() {
 			
 		}
 
-		public Items(int itemId, String image, double price, String description, int stock, Orders orderItems) {
+		public Items(int itemId, String image, double price, String description, int stock, Orders order_no) {
 			super();
 			this.itemId = itemId;
 			this.image = image;
 			this.price = price;
 			this.description = description;
 			this.stock = stock;
-			this.orderItems = orderItems;
+			this.order_no = order_no;
 		}
 
 		public int getItemId() {
@@ -100,18 +95,18 @@ public class Items {
 			this.stock = stock;
 		}
 
-		public Orders getOrderItems() {
-			return orderItems;
+		public Orders getOrder_no() {
+			return order_no;
 		}
 
-		public void setOrderItems(Orders orderItems) {
-			this.orderItems = orderItems;
+		public void setOrder_no(Orders order_no) {
+			this.order_no = order_no;
 		}
 
 		@Override
 		public String toString() {
 			return "Items [itemId=" + itemId + ", image=" + image + ", price=" + price + ", description=" + description
-					+ ", stock=" + stock + ", orderItems=" + orderItems + "]";
+					+ ", stock=" + stock + ", order_no=" + order_no + "]";
 		}
 
 		@Override
@@ -121,7 +116,7 @@ public class Items {
 			result = prime * result + ((description == null) ? 0 : description.hashCode());
 			result = prime * result + ((image == null) ? 0 : image.hashCode());
 			result = prime * result + itemId;
-			result = prime * result + ((orderItems == null) ? 0 : orderItems.hashCode());
+			result = prime * result + ((order_no == null) ? 0 : order_no.hashCode());
 			long temp;
 			temp = Double.doubleToLongBits(price);
 			result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -150,10 +145,10 @@ public class Items {
 				return false;
 			if (itemId != other.itemId)
 				return false;
-			if (orderItems == null) {
-				if (other.orderItems != null)
+			if (order_no == null) {
+				if (other.order_no != null)
 					return false;
-			} else if (!orderItems.equals(other.orderItems))
+			} else if (!order_no.equals(other.order_no))
 				return false;
 			if (Double.doubleToLongBits(price) != Double.doubleToLongBits(other.price))
 				return false;
@@ -161,5 +156,6 @@ public class Items {
 				return false;
 			return true;
 		}
+		
 		
 }
